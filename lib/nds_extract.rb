@@ -92,10 +92,6 @@ def movies_with_directors_set(source)
     name_of_dir = each_element_obj[:name]
     each_movie_array = each_element_obj[:movies]
     single_director_movies = movies_with_director_key(name_of_dir, each_movie_array)
-    
-    if i == 0 
-      p single_director_movies
-    end
     result.push(movies_with_director_key(name_of_dir, each_movie_array))
     
     i += 1
