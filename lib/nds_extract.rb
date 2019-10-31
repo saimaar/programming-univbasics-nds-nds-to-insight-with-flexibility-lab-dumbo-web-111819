@@ -89,6 +89,7 @@ def movies_with_directors_set(source)
   while i < source.length do 
     each_element_obj = source[i]
     name_of_dir = each_element_obj[:name]
+    p name_of_dir
     each_movie_array = each_element_obj[:movies]
     result << each_movie_array
     i+=1
