@@ -46,7 +46,7 @@ def movies_with_director_key(name, movies_collection)
     movie_array << movie_with_director_name(name, obj_movie)
     i+= 1
   end 
-  p movie_array
+ 
   return movie_array
 end
 
@@ -93,7 +93,8 @@ def movies_with_directors_set(source)
     each_movie_array = each_element_obj[:movies]
     single_director_movies = movies_with_director_key(name_of_dir, each_movie_array)
     
-    
+    if i == 0 
+      p single_director_movies
     result.push(movies_with_director_key(name_of_dir, each_movie_array))
     
     i += 1
