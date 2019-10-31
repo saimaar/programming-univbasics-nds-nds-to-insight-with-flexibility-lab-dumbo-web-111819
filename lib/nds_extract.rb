@@ -91,6 +91,7 @@ def movies_with_directors_set(source)
     each_element_obj = source[i]
     name_of_dir = each_element_obj[:name]
     each_movie_array = each_element_obj[:movies]
+    final = movies_with_director_key(name_of_dir, each_movie_array)
     
     result.push(movies_with_director_key(name_of_dir, each_movie_array))
     
