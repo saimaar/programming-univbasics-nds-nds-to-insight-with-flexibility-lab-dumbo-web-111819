@@ -83,7 +83,8 @@ def gross_per_studio(collection)
 end
 
 def movies_with_directors_set(source)
-  result =  []
+  obj = {}
+  result = []
   i = 0 
   
   while i < source.length do 
@@ -91,7 +92,12 @@ def movies_with_directors_set(source)
     name_of_dir = each_element_obj[:name]
     p name_of_dir
     each_movie_array = each_element_obj[:movies]
-    result << each_movie_array
+    
+    if obj[name_of_dir] == nil 
+      obj[name_of_dir] = each_movie_array
+    end
+    
+    
     i+=1
   end 
 
