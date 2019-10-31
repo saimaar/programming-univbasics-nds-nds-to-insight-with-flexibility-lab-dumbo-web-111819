@@ -46,7 +46,7 @@ def movies_with_director_key(name, movies_collection)
     movie_array << movie_with_director_name(name, obj_movie)
     i+= 1
   end 
-  
+  p movie_array
   return movie_array
 end
 
