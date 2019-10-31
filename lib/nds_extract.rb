@@ -92,6 +92,7 @@ def movies_with_directors_set(source)
     name_of_dir = each_element_obj[:name]
     each_movie_array = each_element_obj[:movies]
     result.push(each_movie_array)
+    
     i += 1
   end 
 
