@@ -91,16 +91,11 @@ def movies_with_directors_set(source)
     each_element_obj = source[i]
     name_of_dir = each_element_obj[:name]
     each_movie_array = each_element_obj[:movies]
-    
-    if obj[name_of_dir] == nil 
-      obj[name_of_dir] = each_movie_array
-      result.push(obj)
-    end
-    i+=1
+    result.push(each_movie_array)
+    i += 1
   end 
 
-  p result 
-  return result
+
   
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
