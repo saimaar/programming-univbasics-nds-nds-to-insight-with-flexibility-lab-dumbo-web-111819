@@ -35,10 +35,10 @@ end
 
 def movies_with_director_key(name, movies_collection)
   #here we are looping over movies_collection which is an array of Hashes 
-  #where each hash  represents the name of the movie,
+  #where each hash  represents the info of the movie,
   # via a loop, we need to take out those hashes from the array and pass into the 
-  # movie_with_director_name method alond with director_name so that , it will return 
-  #an array of hash which will include the name of the director and his info 
+  # movie_with_director_name method along with director_name so that , it will return 
+  #an array of hash which will include the name of the director and the movie info 
   i =  0
   movie_array = [] 
   while i < movies_collection.length do
