@@ -34,24 +34,28 @@ end
 # Your code after this point
 
 def movies_with_director_key(name, movies_collection)
-  # GOAL: For each Hash in an Array (movies_collection), provide a collection
-  # of movies and a directors name to the movie_with_director_name method
-  # and accumulate the returned Array of movies into a new Array that's
-  # returned by this method.
-  #
-  # INPUT:
-  # * name: A director's name
-  # * movies_collection: An Array of Hashes where each Hash represents a movie
-  #
-  # RETURN:
-  #
-  # Array of Hashes where each Hash represents a movie; however, they should all have a
-  # :director_name key. This addition can be done by using the provided
-  # movie_with_director_name method
+  #here we are looping over movies_collection which is an array of Hashes 
+  #where each hash is represents the name of the movie,
+  # via a loop, we need to take out those hashes from the array and pass into the 
+  # movie_with_director_name method alond with director_name so that , it will return 
+  #an array of hash which will include the name of the director and his info 
+  i =  0
+  movie_array = [] 
+  while i < movies_collection.length do
+    obj_movie = movies_collection[i]
+    movie_array << movie_with_director_name(name, obj_movie)
+    i+= 1
+  end 
+  
+  return movie_array
 end
 
 
 def gross_per_studio(collection)
+  
+  
+  p collection
+  
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
   # return a Hash that includes the total worldwide_gross of all the movies from
   # each studio.
