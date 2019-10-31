@@ -96,8 +96,6 @@ def movies_with_directors_set(source)
     if obj[name_of_dir] == nil 
       obj[name_of_dir] = each_movie_array
     end
-    
-    
     i+=1
   end 
 
