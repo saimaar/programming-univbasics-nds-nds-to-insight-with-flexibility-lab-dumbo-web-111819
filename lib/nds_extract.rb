@@ -88,11 +88,12 @@ def movies_with_directors_set(source)
   
   while i < source.length do 
     each_element_obj = source[i]
+    p each_element_obj
     each_movie_array = each_element_obj[:movies]
     result << each_movie_array
     i+=1
   end 
-  p source
+
   result 
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
