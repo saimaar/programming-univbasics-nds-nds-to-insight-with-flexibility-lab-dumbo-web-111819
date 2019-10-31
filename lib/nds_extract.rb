@@ -95,6 +95,7 @@ def movies_with_directors_set(source)
     
     if i == 0 
       p single_director_movies
+    end
     result.push(movies_with_director_key(name_of_dir, each_movie_array))
     
     i += 1
